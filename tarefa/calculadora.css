@@ -1,98 +1,95 @@
-
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f4f8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    color: #333;
-    justify-content: center;
-  }
-  
-  h1 {
-    text-align: center;
-    color: #333;
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    text-align: center;
-    color: #666;
-    font-size: 18px;
-    margin-bottom: 40px;
-  }
-  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e3eaf1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
 
-  #resposta {
-      width: 230px;
-  height: 50px;
-  font-size: 32px;
+.container {
+  background-color: #ffffff;
+  padding: 30px 20px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+h2 {
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: #666;
+}
+
+#resposta {
+  width: 100%;
+  height: 60px;
+  font-size: 28px;
   text-align: right;
-  background-color: #fff;
-  border: 2px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  color: #333;
-  }
+  padding: 12px 2px;
+  background-color: #f1f5f9;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+  color: #111;
+  font-family: 'Orbitron', monospace;
+}
 
-  input[type="button"] {
-    width: 60px;
-    height: 60px;
-    font-size: 24px;
-    color: white;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 10px;
-    margin: 8px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 0.2s;
-    justify-content: center;
-  }
-  
-  input[type="button"]:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-  }
-  
-  input[type="button"]:active {
-    background-color: #388e3c;
-    transform: scale(0.95);
-  }
-  
-  #soma, #sub, #vezes, #div, #igual, #clear{
-    background-color: #ffa500;
-  }
-  
-  #soma:hover, #sub:hover {
-    background-color: #ff8c00;
-  }
-  
-  #soma:active, #sub:active {
-    background-color: #e07b00;
-  }
-  
-  p {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-    justify-items: center;
-  }
-  
-  .container {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;  
-    text-align: center;
-  }
-  
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.grid-numeros, .grid-operacoes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  justify-items: center;
+}
+
+input[type="button"] {
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.numero {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.numero:hover {
+  background-color: #43a047;
+  transform: scale(1.05);
+}
+
+#soma, #sub, #vezes, #div, #igual, #clear, #abrePar, #fechaPar {
+  background-color: #ff9800;
+  color: white;
+}
+
+#soma:hover, #sub:hover, #vezes:hover, #div:hover, #igual:hover, #clear:hover, #abrePar:hover, #fechaPar:hover {
+  background-color: #fb8c00;
+  transform: scale(1.05);
+}
+
+input[type="button"]:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}

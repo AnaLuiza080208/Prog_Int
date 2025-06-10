@@ -52,6 +52,8 @@ document.getElementById('soma').addEventListener('click', () => escolherOperacao
 document.getElementById('sub').addEventListener('click', () => escolherOperacao('-'));
 document.getElementById('vezes').addEventListener('click', () => escolherOperacao('*'));
 document.getElementById('div').addEventListener('click', () => escolherOperacao('/'));
+document.getElementById('abrePar').addEventListener('click', () => escolherOperacao('('));
+document.getElementById('fechaPar').addEventListener('click', () => escolherOperacao(')'));
 document.getElementById('igual').addEventListener('click', calcularResultado);
 document.getElementById('clear').addEventListener('click', limpar);
 
