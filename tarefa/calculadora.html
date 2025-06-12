@@ -1,45 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora</title>
-    <link rel="stylesheet" href="calculadora.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Calculadora</h1>
-      <h2>Digite os números</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora - How to Train Your Dragon</title>
+  <link rel="stylesheet" href="calculadora.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-      <div id="resposta"></div>
+  <div class="container">
+    <h1>Calculator</h1>
+    <h2>Ana Edition</h2>
 
-      <div class="buttons">
-        <div class="grid-numeros">
-          <input type="button" value="1" class="numero" id="1" />
-          <input type="button" value="2" class="numero" id="2" />
-          <input type="button" value="3" class="numero" id="3" />
-          <input type="button" value="4" class="numero" id="4" />
-          <input type="button" value="5" class="numero" id="5" />
-          <input type="button" value="6" class="numero" id="6" />
-          <input type="button" value="7" class="numero" id="7" />
-          <input type="button" value="8" class="numero" id="8" />
-          <input type="button" value="9" class="numero" id="9" />
-          <input type="button" value="0" class="numero" id="0" />
-        </div>
+    <div id="resposta"></div>
 
-        <div class="grid-operacoes">
-          <input type="button" value="+" id="soma" />
-          <input type="button" value="-" id="sub" />
-          <input type="button" value="*" id="vezes" />
-          <input type="button" value="/" id="div" />
-          <input type="button" value="C" id="clear" />
-          <input type="button" value="(" id="abrePar" />
-          <input type="button" value=")" id="fechaPar" />
-          <input type="button" value="=" id="igual" />
-        </div>
-      </div>
+    <div class="buttons">
+      <input type="button" value="7" class="numero" />
+      <input type="button" value="8" class="numero" />
+      <input type="button" value="9" class="numero" />
+      <input type="button" value="/" class="operador" id="div" />
+      <input type="button" value="4" class="numero" />
+      <input type="button" value="5" class="numero" />
+      <input type="button" value="6" class="numero" />
+      <input type="button" value="*" class="operador" id="vezes" />
+      <input type="button" value="1" class="numero" />
+      <input type="button" value="2" class="numero" />
+      <input type="button" value="3" class="numero" />
+      <input type="button" value="-" class="operador" id="sub" />
+      <input type="button" value="0" class="numero zero" />
+      <input type="button" value="(" class="parenteses" id="abrePar" />
+      <input type="button" value=")" class="parenteses" id="fechaPar" />
+      <input type="button" value="+" class="operador" id="soma" />
+      <input type="button" value="C" class="limpar" id="clear" />
+      <input type="button" value="=" class="igual" id="igual" />
     </div>
+  </div>
 
-    <script src="calculadora.js"></script>
-  </body>
+  <script src="calculadora.js"></script>
+</body>
 </html>

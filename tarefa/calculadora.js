@@ -1,59 +1,42 @@
 let display = document.getElementById('resposta');
-let num1 = '';
-let num2 = '';
-let operacao = '';
+let expressao = '';
 
 function adicionarNumero(numero) {
-  display.textContent += numero;
+  expressao += numero;
+  display.textContent = expressao;
 }
 
-function escolherOperacao(op) {
-  if (num1 === '') {
-    num1 = display.textContent;
-    operacao = op;
-    display.textContent = '';
-  }
+function adicionarOperacao(op) {
+  expressao += op;
+  display.textContent = expressao;
 }
-
 
 function calcularResultado() {
-  num2 = display.textContent;
-  let resultado = 0;
-
-  if (operacao === '+') {
-    resultado = parseFloat(num1) + parseFloat(num2);
-  } else if (operacao === '-') {
-    resultado = parseFloat(num1) - parseFloat(num2);
-  } else if (operacao === '*') {
-    resultado = parseFloat(num1) * parseFloat(num2);
-  }else if (operacao === '/') {
-    resultado = parseFloat(num1) / parseFloat(num2);
+  try {
+    const resultado = eval(expressao);
+    display.textContent = resultado;
+    expressao = resultado.toString();
+  } catch (error) {
+    display.textContent = 'Erro';
+    expressao = '';
   }
-
-  display.textContent = resultado;
-  num1 = resultado.toString();
-  num2 = '';
-  operacao = '';
 }
 
 function limpar() {
-    display.textContent = '';
-    num1 = '';
-    num2 = '';
-    operacao = '';
-  }
+  display.textContent = '';
+  expressao = '';
+}
 
 document.querySelectorAll('.numero').forEach(button => {
   button.addEventListener('click', () => adicionarNumero(button.value));
 });
 
+document.getElementById('soma').addEventListener('click', () => adicionarOperacao('+'));
+document.getElementById('sub').addEventListener('click', () => adicionarOperacao('-'));
+document.getElementById('vezes').addEventListener('click', () => adicionarOperacao('*'));
+document.getElementById('div').addEventListener('click', () => adicionarOperacao('/'));
+document.getElementById('abrePar').addEventListener('click', () => adicionarOperacao('('));
+document.getElementById('fechaPar').addEventListener('click', () => adicionarOperacao(')'));
 
-document.getElementById('soma').addEventListener('click', () => escolherOperacao('+'));
-document.getElementById('sub').addEventListener('click', () => escolherOperacao('-'));
-document.getElementById('vezes').addEventListener('click', () => escolherOperacao('*'));
-document.getElementById('div').addEventListener('click', () => escolherOperacao('/'));
-document.getElementById('abrePar').addEventListener('click', () => escolherOperacao('('));
-document.getElementById('fechaPar').addEventListener('click', () => escolherOperacao(')'));
 document.getElementById('igual').addEventListener('click', calcularResultado);
 document.getElementById('clear').addEventListener('click', limpar);
-
